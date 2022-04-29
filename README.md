@@ -14,5 +14,5 @@ Dipartimento di Fisica ed Astronomia - Università degli Studi di Padova
 
 
 ## Description
-This repository covers the activities carried out at the laboratory corresponding to the subject ``Advanced Laboratory (A-B)'', and therefore includes (or will include at some point) almost a year of analysis. The main activities carried out so far are:
+This repository covers the activities carried out at the laboratory corresponding to the subject "Advanced Laboratory (A-B)", and therefore includes (or will include at some point) almost a year of analysis. The main activities carried out so far are:
 * Calibration
