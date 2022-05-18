@@ -5,6 +5,7 @@ Dipartimento di Fisica ed Astronomia - Università degli Studi di Padova
 
 ![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)
 
+![versions](https://img.shields.io/badge/-c++-black?logo=c%2B%2B&style=social)
 
 ## Authors
 
