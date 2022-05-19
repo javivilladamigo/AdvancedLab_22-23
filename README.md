@@ -19,4 +19,4 @@ This repository covers the activities carried out at the laboratory correspondin
 * Calibration
 * Comparison between Milano and Padova CLYCs
 * PSA analysis with Milano and Padova CLYCs
-* Coincidences $$\gamma$$-$$\gamma$$, $$\neutron$$-$$\gamma$$ and $$\neutron$$-$$\neutron$$
+* Coincidences gamma-gamma, neutron-gamma and neutron-neutron
