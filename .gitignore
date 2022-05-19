@@ -6,3 +6,4 @@ macros_gottardo/
 *.d
 *.so
 *.pcm
+correlated_tree.root
