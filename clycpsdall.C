@@ -3,6 +3,7 @@
 #include <TH2.h>
 #include <TStyle.h>
 #include <TCanvas.h>
+#include <iomanip>
 
 void clycana::Loop(Long64_t nbEntries = -1)
 {
@@ -35,16 +36,16 @@ void clycana::Loop(Long64_t nbEntries = -1)
  // C1 -> Divide(1,2);
  // C1 -> cd(1);
   
-  TFile *correlated_tree = new TFile("correlated_tree_71.root","recreate");
+  TFile *correlated_tree = new TFile("correlatedTree.root", "recreate");
   TH1D *signal=new TH1D("signal", "signal",5000,0,5000);
-  Double_t AMP_amp=0; Int_t Samples_AMP[5000];
+  Double_t AMP_amp=0; Int_t Samples_PSA[5000];
   Long64_t jentry_PSA=0;  Long64_t jentry_AMP=0; 
  
 
   TTree *data = new TTree("data", "data");
   data->Branch("Timestamp_AMP",&Timestamp_AMP,"TAC_amp/D");
   data->Branch("AMP_amp",   &AMP_amp   ,"AMP_amp/D");
-  data->Branch("Samples_AMP", Samples_AMP  ,"Samples_AMP[5000]/I");
+  data->Branch("Samples_PSA", Samples_PSA  ,"Samples_PSA[5000]/I");
   data->SetAutoSave(10000);
 
 
@@ -54,24 +55,24 @@ void clycana::Loop(Long64_t nbEntries = -1)
   
   for (jentry_AMP = 0; jentry_AMP < nentries_AMP; jentry_AMP++) // main loop
   {
-    for (int r = 3; r < 500; r++) psa_samples[r] = 0.;
+    for (int r = 3; r < 500; r++) Samples_PSA[r] = 0.;
     if (jentry_AMP % 3000==0 ) { cout << "percentage completed " << 100.*jentry_AMP/nentries_AMP << " %"<< endl<< std::setw(2) << std::setfill('0'); cout.flush(); }
       
 
     Long64_t ientry_AMP = LoadTree_AMP(jentry_AMP);
     if (ientry_AMP < 0) break;
+    Long64_t ientry_PSA = LoadTree_PSA(jentry_PSA);
+
     nb_AMP = fChain_AMP->GetEntry(jentry_AMP);   nbytes_AMP += nb_AMP;
     AMP_amp = Energy_AMP;
 
-    jentry_AMP = jentry_AMP;
-    jentry_PSA = jentry_PSA;
+    jentry_PSA = jentry_AMP;
 
-    Long64_t ientry_AMP = LoadTree_AMP(jentry_AMP);
-    Long64_t ientry_PSA = LoadTree_PSA(jentry_PSA);
+    
+    
 
     if (Energy_AMP>2000.)
     {
-
       fChain_AMP->GetEntry(jentry_AMP);
       previous_tsd = abs(Timestamp_AMP - Timestamp_PSA);
 

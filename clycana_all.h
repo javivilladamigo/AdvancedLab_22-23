@@ -76,9 +76,9 @@ clycana::clycana(TTree *tree_PSA, TTree *tree_AMP) : fChain_PSA(0), fChain_AMP(0
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree_PSA == 0) {
-      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/Users/javi/Documents/Padova/2/AdvancedLab/AdvancedLab_22-23/data/UNFILTERED/CH_2@DT5725_1701_Data_60Co_252Cf_CLYC_ML_newOpticGrease.root");
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/Users/javi/Documents/Padova/2/AdvancedLab/AdvancedLab_22-23/data/20220517/252Cf_CLYC_both_COINCIDENCE/FILTERED/CH2@252Cf_CLYC_MI_COINCIDENCE_PSA.root");
       if (!f || !f->IsOpen()) {
-         f = new TFile("/Users/javi/Documents/Padova/2/AdvancedLab/AdvancedLab_22-23/data/UNFILTERED/CH_2@DT5725_1701_Data_60Co_252Cf_CLYC_ML_newOpticGrease.root");
+         f = new TFile("/Users/javi/Documents/Padova/2/AdvancedLab/AdvancedLab_22-23/data/20220517/252Cf_CLYC_both_COINCIDENCE/FILTERED/CH2@252Cf_CLYC_MI_COINCIDENCE_PSA.root");
       }
       f->GetObject("caenData_AMP", tree_PSA);
 
@@ -103,9 +103,9 @@ clycana::clycana(TTree *tree_PSA, TTree *tree_AMP) : fChain_PSA(0), fChain_AMP(0
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree_AMP == 0) {
-      TFile *h = (TFile*)gROOT->GetListOfFiles()->FindObject("/Users/javi/Documents/Padova/2/AdvancedLab/AdvancedLab_22-23/data/20220517/252Cf_CLYC_both_COINCIDENCE/FILTERED/CH_0@DT5725_1701_Data_252Cf_CLYC_both_COINCIDENCE_CH4_1.root");
+      TFile *h = (TFile*)gROOT->GetListOfFiles()->FindObject("/Users/javi/Documents/Padova/2/AdvancedLab/AdvancedLab_22-23/data/20220517/252Cf_CLYC_both_COINCIDENCE/FILTERED/CH0@252Cf_CLYC_MI_COINCIDENCE_ENERGY.root");
       if (!h || !h->IsOpen()) {
-         h = new TFile("/Users/javi/Documents/Padova/2/AdvancedLab/AdvancedLab_22-23/data/20220517/252Cf_CLYC_both_COINCIDENCE/FILTERED/CH_0@DT5725_1701_Data_252Cf_CLYC_both_COINCIDENCE_CH4_1.root");
+         h = new TFile("/Users/javi/Documents/Padova/2/AdvancedLab/AdvancedLab_22-23/data/20220517/252Cf_CLYC_both_COINCIDENCE/FILTERED/CH0@252Cf_CLYC_MI_COINCIDENCE_ENERGY.root");
       }
       h->GetObject("caenData_AMP", tree_AMP);
 
