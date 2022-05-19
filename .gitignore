@@ -3,3 +3,6 @@ data/
 macros_gottardo/
 .ipynb_checkpoints/
 .vscode
+*.d
+*.so
+*.pcm
