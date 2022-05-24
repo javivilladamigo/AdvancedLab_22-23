@@ -7,3 +7,4 @@ macros_gottardo/
 *.so
 *.pcm
 *.root
+*icloud
