@@ -21,5 +21,5 @@ This repository covers the activities carried out at the laboratory correspondin
 * PSA analysis with Milano and Padova CLYCs
 * Coincidences gamma-gamma, neutron-gamma and neutron-neutron
 * Neutron energy spectrum when correlated with
-* * another neutron
-* * a gamma
+  * another neutron
+  * a gamma
